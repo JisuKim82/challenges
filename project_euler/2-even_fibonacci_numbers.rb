@@ -8,11 +8,9 @@
 
 def sum_even_fibonacci(n)
   fibonacci = [1,2]
-  x = 2
 
-  while (fibonacci[x-1] + fibonacci[x-2] < n)
-    fibonacci<<fibonacci[x-1]+fibonacci[x-2]
-    x+=1
+  while (fibonacci[-1] + fibonacci[-2] < n)
+    fibonacci<<fibonacci[-1]+fibonacci[-2]
   end 
 
   fibonacci.select(&:even?).inject(:+)
